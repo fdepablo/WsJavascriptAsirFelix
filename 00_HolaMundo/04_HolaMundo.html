@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function cambiarColor(){
+            
+        }
+    </script>
 </head>
-<body>
+<body style="background-color:aqua">
     <!--
         Javascript es un lenguaje muy orientado a eventos, es decir, que muchas veces
         nuestro código NO se va a ejecutar cuando veamos la página, si no cuando
@@ -16,6 +21,17 @@
     -->
     <h1>Introducción a los eventos</h1>
     <button onclick="alert('Hola usuario')">Pulsame para saludarte :)</button>
-    <!-- Esto es un comentario de prueba -->
+    
+    <!-- 
+        En en javascript tenemos mas eventos, no solo el de pulsar, hay eventos
+        para que prácticamente todo
+    -->
+    <button 
+        onmouseover="console.log('raton pasando por encima')"
+        onmouseleave="console.log('raton saliendo del boton')"
+        onclick="console.log('raton pulsado')">Pasa el ratón por encima ;)</button>
+
+    <button onclick="document.body.style.background = 'pink'">Cambiar de color fondo de página</button>
+
 </body>
 </html>
