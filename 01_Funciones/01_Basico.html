@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Es muy habitual en JS y en muchos lenguajes de programación el uso de
+        //funciones. Una funcion es un objeto que hace una determinada funcionalidad.
+        //Una función puede tener parámetros de entrada y parametros de salido (o no)
+
+        //Vamos a crear la funcion más sencilla, cuya funcionalidad es imprimir 
+        //"hola mundo" por consola. 
+
+        //una funcion empieza por la palabra "function" y a continuación se le da
+        //el nombre de la funcion. Por último, entre paretensis van los parámetros
+        //de entrada y luego el bloque de la función entre llaves
+
+        function imprimirHolaMundo(){//ojo JS es case sensitive
+            console.log("Hola mundo");
+        }
+
+        //lo que hemos hecho arriba, es crear la funcion, pero NO la
+        //hemos llamado en ningun momento
+
+        //A una funcion la invocamos mediante el nombre
+        imprimirHolaMundo()
+        imprimirHolaMundo()
+        imprimirHolaMundo()
+
+        function imprimirSaludoFelix(){
+            console.log("Hola Felix")
+        }
+
+        imprimirSaludoFelix()
+
+        function imprimirSaludoGuillermo(){
+            console.log("Hola Guillermo")
+        }
+
+        imprimirSaludoGuillermo()
+
+        function imprimirSaludo(nombre){
+            console.log("Hola " + nombre)
+        }
+
+        imprimirSaludo("Messi")
+        imprimirSaludo("Vladimir")
+        imprimirSaludo("El bicho")
+
+        function imprimirNombreEdad(nombre,edad){
+            console.log("El nombre es: " + nombre + " y la edad es: " + edad)
+        }
+
+        imprimirNombreEdad("Messi",36)
+        imprimirNombreEdad("El bicho",39)
+    </script>
+</head>
+<body>
+    <h1>Funciones en JS</h1>
+    <button onclick="imprimirSaludoGuillermo()">Pulsame para saludar a Guillermo</button>
+    <!-- Pequeña actividad: Hacer botones para usar todas las funciones que hemos hecho
+    hasta ahora-->
+</body>
+</html>
