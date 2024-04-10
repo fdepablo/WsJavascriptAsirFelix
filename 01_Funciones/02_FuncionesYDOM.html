@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        function mostrarNombre(){
+            console.log("mostrarNombre -> Entrando")
+            //Los navegadores y las ultimas versiones de JS crean variables
+            //de manera automática cuyo nombre es el valor del atributo "id"
+            //el elemento. Dicha variable tendrá el elemento al que pertenece
+
+            //Si ponemos el nombre de la variable del elemento y luego "." podemos
+            //acceder a cualquiera de sus atributos
+            alert(inputNombre.value)
+            console.log(inputNombre.placeholder)
+            console.log(inputNombre.type)
+        }
+
+        function ponerNombreFelix(){
+            //Podemos establecer valores en los atributos accediendo a ellos 
+            //y con el simbolo "="
+            inputNombre.value = "Felix"
+        }
+    </script>
+</head>
+<body>
+    <h1>Funciones y arbol DOM</h1>
+    <!-- Recordemos que todas las etiquetas HTML se convierten a objetos con
+    unas estructura en forma de arbol. Este arbol es el llamado arbol DOM-->
+    <label>Nombre:</label>
+    <!-- Para poder acceder a un elemento del arbol DOM con JS, habitualmente
+    se hace a traves de su atributo "id" -->
+    <input id="inputNombre" type="text" value="" placeholder="Escriba aquí su nombre..."/>
+    <br/>
+    <button onclick="mostrarNombre()">Pulsame para mostrar el nombre del campo de texto</button>
+    <br/>
+    <button onclick="ponerNombreFelix()">Pulsame para poner 'felix' en la caja de texto</button>
+</body>
+</html>
