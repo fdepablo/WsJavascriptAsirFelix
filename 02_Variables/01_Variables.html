@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables 01</title>
+    <script>
+        //En programación es muy utilizado un recurso llamado "variable"
+        //Una variable es una espacio de memoria donde podemos guardar
+        //una valor de algún tipo
+        //Recordemos que JS en NO TIPADO, lo que quiere decir que en 
+        //una variable podemos guardar cualquier tipo de dato, por ejemplo
+        //un numero, una cadena de texto, un booleano
+
+        //Existen tres maneras de crear una variable en JS, nostros
+        //usaremos para crear una variable la palabra reserva "let"
+        //seguida del nombre de la variable
+
+        //Por defecto las variables en JS toman el valor "undefined"
+        //que quiere decir que el valor no está definido
+        let variable1;
+        console.log(variable1)
+
+        //podemos asignar valores a las variables mediante el operador
+        //"="
+        variable1 = 1
+        console.log(variable1)
+
+        //Es muy habitual (y buena practica de programacion) inicializar
+        //las variables
+        let variable2 = "Pepe"
+        console.log(variable2)
+        //Es muy normal que las variables cambien de valor en el tiempo
+        //Nótese que NO se vuelve a poner la palabra "let"
+        variable2 = "Manuel"
+        console.log(variable2)
+        variable2 = "Maria"
+        console.log(variable2)
+        //Como JS es NO tipado podemos guardar cualquier cosa
+        variable2 = 23//numero
+        console.log(variable2)
+        variable2 = true//booleano
+        console.log(variable2)
+
+        //podemos encontrar 6 tipos básicos de datos en JS
+        variable2 = "cadena"//cadena o string (equivalente a varchar en BBDD)
+        console.log(variable2)
+        variable2 = 34//number
+        console.log(variable2)
+        variable2 = 34.56//decimal (con decimales)
+        console.log(variable2)
+        variable2 = true//booleano
+        console.log(variable2)
+        variable2 = [1,2,3]//array (colecciones de datos) formato JSON
+        console.log(variable2)
+        variable2 = [1,2,4,true,"cadena"]
+        console.log(variable2)
+        variable2 = {
+            "nombre":"Ironman",
+            "edad":45
+        }//objetos
+        console.log(variable2)
+        //Si definimos 2 veces una variable con el mismo nombre, daría error
+        //let variable2 = 56;
+
+        //Las variables en los lenguajes de programación, tienen un ciclo de vida
+        //el ciclo de vida es, desde cuando nace hasta cuando muere
+        function funcionVariable(){
+            //El ciclo de una variable en JS es desde que se declara
+            //hasta cuando salga del bloque en el que se ha creado. Un bloque
+            //esta limitado por "{" y "}"
+
+            //En este caso la variable2 nacera en la linea siguiente y morira
+            //al final de la función
+            let variable2 = 1
+        }//aquí morirá la variable2
+
+    </script>
+</head>
+<body>
+    <h1>Variable en JS</h1>
+</body>
+</html>

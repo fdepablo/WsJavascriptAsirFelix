@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Los operadores suelen ser caracteres especiales que realizan
+        //ciertas funcionales
+
+        //Operadores matemáticos
+        //suma -> +
+        let suma = 3 + 6
+        console.log(suma)
+        let resta = 6 - 3
+        console.log(resta)
+        let multiplicacion = 5 * 6
+        console.log(multiplicacion)
+        let division = 20 / 5//nos devuelve el cociente
+        console.log(division)
+        //operador "modulo", nos devuelve el resto de la division
+        //entera, se representa con "%"
+        let resto = 10 % 2
+        console.log(resto)
+        resto = 10 % 3
+        console.log(resto)
+
+        //Es muy habitual, utilizar variables para operar con ellas
+        let numero1 = 40
+        let numero2 = 2
+        let resultado = numero1 + numero2
+        console.log(resultado)
+        resultado = numero2 - numero1
+        console.log(resultado)//-38
+        numero1 = 1
+        resultado = numero2 - numero1
+        console.log(resultado)//1
+        numero1 = 4
+        resultado = numero2 * numero1//8
+        console.log(resultado)
+
+        //Contadores ascendetes, son variables que buscan sumar siempre 1 al valor actual
+        let contador = 0
+        console.log(contador)//0
+        contador = contador + 1
+        console.log(contador)//1
+        contador = contador + 1;
+        console.log(contador)//2
+        //Los contadores son tan usados en informática que suelen tener operador
+        //propio. Para incrementar en 1 una variable usamos el operador "++"
+        contador++//contador = contador + 1
+        console.log(contador)//3
+        contador++
+        console.log(contador)//4
+
+        //Tambien podemos encontrar contadores descentes, que en este caso se va
+        //a restar 1 al valor actual de la variable
+        contador = contador - 1
+        console.log(contador)//3
+        //Podemos acortarlo con el operador "--"
+        contador--//contador = contador - 1
+        console.log(contador)//2
+
+        //Existe el concepto de "acumulador". 
+        //Por ejemplo, un acumulador de suma, la idea es sumar una cantidad variable
+        //al valor actual de la variable
+        let acumulador = 0
+        //si queremos añadir 5 al acumulador
+        acumulador = acumulador + 5
+        console.log(acumulador)//5
+        acumulador = acumulador + 5
+        console.log(acumulador)//10
+        //También son muy usados en informatica, por lo que tienen su operador
+        //que en este caso es "+="
+        acumulador += 5 //acumulador = acumulador + 5
+        console.log(acumulador)//15
+
+        //Acumulador de resta
+        acumulador -= 5//acumulador = acumulador - 5
+        console.log(acumulador)//10
+        acumulador -= 8
+        console.log(acumulador)//2
+        //Acumulacion de multiplicacion
+        acumulador *= 5// acumulador = acumulador * 5
+        console.log(acumulador)//10
+        //Acumulador de la division
+        acumulador /= 2 //acumulador = acumulador / 2
+        console.log(acumulador)//5
+    </script>
+</head>
+<body>
+    <h1>Operadores en JS</h1>
+</body>
+</html>
