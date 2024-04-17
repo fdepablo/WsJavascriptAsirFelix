@@ -7,6 +7,7 @@
     <style>
         button{
             margin-top: 10px;
+            margin-bottom: 10px;
         }
     </style>
     <script>
@@ -23,6 +24,22 @@
         function resetContador(){
             inputContador.value = 0
         }
+        function acumularSuma(){
+            let contador = inputContador.value
+            //Todo lo que se recoja por "input" siempre siempre siempre
+            //será tratado como "cadena"
+            let acumulador = inputSuma.value
+            //Por lo tanto, si queremos tratar el valor del input con "number"
+            //debemos de convertir el tipo. Para ello usaremos la funcion "parseInt()"
+            let nContador = parseInt(contador)//convertimos el numero de cadena a numero
+            let nAcumulador = parseInt(acumulador)
+
+            //Una vez convertidos los numeros, ya los podemos acumular para que se 
+            //se sumen. Si no los convertimos, el operador "+" con cadenas hace
+            //funcion de concatenación
+            nContador += nAcumulador //contador = contador + acumulador
+            inputContador.value = nContador
+        }
     </script>
 </head>
 <body>
@@ -38,5 +55,9 @@
     <button onmouseover="incrementarContador()"
             onmouseleave="decrementarContador()"
             onclick="resetContador()">Pasa por encima y flipa en colores. Pincha si eres hombre</button>
+    <br/>
+    <label>Valor a sumar al contador</label><input id="inputSuma" type="number" value="0"/>
+    <br/>
+    <button onclick="acumularSuma()">Pulsa para sumar al contador</button>
 </body>
 </html>
