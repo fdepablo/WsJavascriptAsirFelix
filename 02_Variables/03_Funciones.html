@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function incrementarContador(){
+            let contador = inputContador.value
+            contador++
+            inputContador.value = contador
+        }
+        function decrementarContador(){
+            let contador = inputContador.value
+            contador--
+            inputContador.value = contador
+        }
+        function resetContador(){
+            inputContador.value = 0
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejemplos de variables, operadores y funciones</h1>
+    <hr/>
+    <h2>Ejemplo de contador en una caja de texto</h2>
+    <label>Contador:</label><input id="inputContador" type="number" value="0"/>
+    <br/>
+    <button onclick="incrementarContador()">Púlsame para incrementar el contador</button>
+    <br/>
+    <button onclick="decrementarContador()">Púlsame para decrementar el contador</button>
+    <br/>
+    <button onmouseover="incrementarContador()"
+            onmouseleave="decrementarContador()"
+            onclick="resetContador()">Pasa por encima y flipa en colores. Pincha si eres hombre</button>
+</body>
+</html>
