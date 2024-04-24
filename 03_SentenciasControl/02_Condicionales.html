@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Es muy habitual en programación utilizar sentencias de control para
+        //alterar el flujo normal de un programa
+
+        //Para alterar el flujo normal podemos usar la sentencia condicional "if"
+        //Esta sentencia evalua un resultado booleano, y en caso de que sea "true"
+        //ejecutará la sentencia. En caso de que no cumplirse, no la ejecutara
+
+        //Suele utilizarse operadores de comparación, que devuelven un resultado
+        //booleano
+        //Comparación de igualdad "==", cuando dos valores son iguales
+        console.log(5 == 6);//false
+        console.log(5 == 5);//true
+        console.log(true == false)//fase
+        console.log("pepe" == "pepa")//false
+        console.log("pepe" == "pepe")//true
+        console.log("Pepe" == "pepe")//false
+
+        //Existen otros operadores de comparacion para mayores ">" o
+        //menores "<"
+        console.log(5 < 6)//true
+        console.log(7 < 6)//false
+        console.log(5 > 6)//false
+        console.log(7 > 6)//true
+
+        //El último grupo son los operadores de comparcion para
+        //mayores o iguales ">=" o menores o iguales "<="
+        console.log(5 <= 6)//true
+        console.log(5 <= 5)//true
+        console.log(5 <= 4)//false
+        console.log(5 >= 6)//false
+        console.log(5 >= 5)//true
+        console.log(5 >= 4)//true
+
+        //Un bloque condicional empieza por la palabra "if()" y entre
+        //parentesis se pone la expresión booleana que queremos evaluar
+        //En caso "true" entraremos dentro del bloque en caso contario
+        //no
+        if(5 == 5){
+            console.log("Entramos dentro del bloque")
+        }
+
+        if(5 == 4){
+            console.log("No entramos dentro del bloque")
+        }
+
+        //podemos evaluar con operadores lógicos varias condiones
+        //usando "()"
+        if(5 == 5 && 6 <= 8){
+            console.log("ambas condiones se cumplen")
+        }
+
+        //De hecho se suele utilizar mucho con variables
+        let numero1 = 5
+        let numero2 = 5
+        if(numero1 == numero2){
+            console.log("las dos variables son iguales")
+        }
+
+        function compararValoresIguales(){
+            let valor1 = inputNumero1.value
+            let valor2 = inputNumero2.value
+            if(valor1 == valor2){
+                textAreaResultado.value ="Los valores son iguales"
+            }
+        }
+
+        //Hay una variente del condicional "if" que es el llamado 
+        //"if-else"
+        //Esta variente ejecuta el código del "if" en caso de que
+        //sea "true" pero en caso de que sea false, ejecutará el
+        //codigo del bloque "else"
+        console.log("if-else")
+        numero1 = 5
+        numero2 = 6
+        if(numero1 == numero2){
+            console.log("las dos variables son iguales")
+        }else{
+            console.log("los dos variables son diferentes")
+        }
+
+        function compararValoresIgualesDiferentes(){
+            let valor1 = inputNumero1.value
+            let valor2 = inputNumero2.value
+            if(valor1 == valor2){
+                textAreaResultado.value ="Los valores son iguales"
+            }else{
+                textAreaResultado.value ="Los valores son diferentes"
+            }
+        }
+
+        //Hay una tercera forma de condional cuando queremos evaluar varias
+        //condiones, el llamado "if-else if-else"
+        numero1 = 5
+        numero2 = 6
+        if(numero1 == numero2){
+            console.log("las dos variables son iguales")
+        }else if(numero1 < numero2){
+            //Este código solo se ejecutará en caso de que
+            //no haya entrado en el if anterior
+            console.log("El número 1 es menor que el número 2")
+        }else if(numero1 > numero2){
+            //Este código solo se ejecutará en caso de que
+            //no haya entrado en el if anterior
+            console.log("El número 1 es mayor que el número 2")
+        }
+
+        let diaSemana = "lunes"
+        if(diaSemana == "lunes"){
+            console.log("I hate monday")
+        }else if(diaSemana == "martes") {
+            console.log("Es martes, vamos mejorando")
+        }else if(diaSemana == "miercoles"){
+            console.log("Es miercoles, el ecuador :)")
+        }else if(diaSemana == "jueves"){
+            console.log("Juernes!!!! :) :) :)")
+        }else if(diaSemana == "viernes"){
+            console.log("Empieza el viernes!!!")
+        }else if(diaSemana == "sabado"){
+            console.log("Sabado sabadete.... camisa nueva y... :)")
+        }else if(diaSemana == "domingo"){
+            console.log("Mierda, mañana es lunes :( i hate monday :())")
+        }else{//tambien podemos poner "else" para el resto de casos
+            console.log("No se el día de la semana que has puesto...")
+        }
+
+        function detectarDiaSemana(){
+            let diaSemana = inputDiaSemana.value
+            if(diaSemana == "lunes"){
+                console.log("I hate monday")
+                textAreaResultado.value ="I hate monday"
+            }else if(diaSemana == "martes") {
+                console.log("Es martes, vamos mejorando")
+                textAreaResultado.value ="Es martes, vamos mejorando"
+            }else if(diaSemana == "miercoles"){
+                console.log("Es miercoles, el ecuador :)")
+                textAreaResultado.value ="Es miercoles, el ecuador :)"
+            }else if(diaSemana == "jueves"){
+                console.log("Juernes!!!! :) :) :)")
+                textAreaResultado.value ="Juernes!!!! :) :) :)"
+            }else if(diaSemana == "viernes"){
+                console.log("Empieza el viernes!!!")
+                textAreaResultado.value ="Empieza el viernes!!!"
+            }else if(diaSemana == "sabado"){
+                console.log("Sabado sabadete.... camisa nueva y... :)")
+                textAreaResultado.value ="Sabado sabadete.... camisa nueva y... :)"
+            }else if(diaSemana == "domingo"){
+                console.log("Mierda, mañana es lunes :( i hate monday :())")
+                textAreaResultado.value ="Mierda, mañana es lunes :( i hate monday :())"
+            }else{//tambien podemos poner "else" para el resto de casos
+                console.log("No se el día de la semana que has puesto...")
+                textAreaResultado.value ="No se el día de la semana que has puesto..."
+            }
+        }
+
+        function detectarDiaSemanaSelect(){
+            let diaSemana = selectDiaSemana.value
+            if(diaSemana == "lunes"){
+                console.log("I hate monday")
+                textAreaResultado.value ="I hate monday"
+            }else if(diaSemana == "martes") {
+                console.log("Es martes, vamos mejorando")
+                textAreaResultado.value ="Es martes, vamos mejorando"
+            }else if(diaSemana == "miercoles"){
+                console.log("Es miercoles, el ecuador :)")
+                textAreaResultado.value ="Es miercoles, el ecuador :)"
+            }else if(diaSemana == "jueves"){
+                console.log("Juernes!!!! :) :) :)")
+                textAreaResultado.value ="Juernes!!!! :) :) :)"
+            }else if(diaSemana == "viernes"){
+                console.log("Empieza el viernes!!!")
+                textAreaResultado.value ="Empieza el viernes!!!"
+            }else if(diaSemana == "sabado"){
+                console.log("Sabado sabadete.... camisa nueva y... :)")
+                textAreaResultado.value ="Sabado sabadete.... camisa nueva y... :)"
+            }else{
+                console.log("Mierda, mañana es lunes :( i hate monday :())")
+                textAreaResultado.value ="Mierda, mañana es lunes :( i hate monday :())"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Comprobamos si dos números son iguales</h1>
+    <label>Numero1:</label>
+    <input type="number" id="inputNumero1"/>
+    <br/> 
+    <label>Numero2:</label>
+    <input type="number" id="inputNumero2"/>
+    <br>
+    <button onclick="compararValoresIguales()">Pulsame para comprobar si son iguales!</button>
+    <button onclick="compararValoresIgualesDiferentes()">Pulsame para comprobar si son iguales o diferentes!</button>
+    <br/>
+    <label>Día semana:</label><input type="text" id="inputDiaSemana"/>
+    <br/>
+    <select id="selectDiaSemana" onchange="detectarDiaSemanaSelect()">
+        <option>lunes</option>
+        <option>martes</option>
+        <option>miercoles</option>
+        <option>jueves</option>
+        <option>viernes</option>
+        <option>sabado</option>
+        <option>domingo</option>
+    </select>
+    <br/>
+    <button onclick="detectarDiaSemana()">Valorar día de la semana</button>
+    <br/>
+    <textarea id="textAreaResultado"></textarea>
+</body>
+</html>

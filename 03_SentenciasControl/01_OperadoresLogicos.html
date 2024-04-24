@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Operadores lógicos
+        //Este tipo de operadores devuelve siempre un valor booleano
+        //y debe valorar tambien valores booleanos
+        let verdadero = true
+        let falso = false
+        //Operador "and" para que este operador devuelva "true" deben
+        //ser los valores "true", en el resto de los casos, devueve "false"
+        //El operador "and" se escribe en JS "&&"
+        let resultado = verdadero && verdadero//true
+        console.log(resultado)
+        resultado = verdadero && falso//false
+        resultado = falso && verdadero//false
+        resultado = falso && falso//false
+
+        //Operador "or" para que este operador devuelva "true" debe ser
+        //algún valor "true", solo en un caso devuelve "false" que es
+        //cuando ambos valores son "false"
+        //El operador "or" se escribe en JS "||"
+        resultado = verdadero || verdadero//true
+        resultado = verdadero || falso//true
+        resultado = falso || verdadero//true
+        resultado = falso || falso//false
+        console.log(resultado)
+
+        //Operador "negacion" este operador devuelve "true" en caso de que
+        //sea "false" y devuelve "false" en caso de que sea "true"
+        //El operador "negacion" se escribe en JS "!"
+        resultado = !verdadero//false
+        resultado = !falso//true
+    </script>
+</head>
+<body>
+
+</body>
+</html>
