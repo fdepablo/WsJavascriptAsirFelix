@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 19</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+        .botonCentrado{
+            text-align: center;
+        }
+        .botonExpandido{
+            width: 100%;
+        }
+    </style>
+    <script src="actividad19.js"></script>
+</head>
+<body>
+    <h1>Actividad 19</h1>
+    <table>
+        <tr>
+            <td><label for="inputNombre">Nombre:</label></td>
+            <td><input id="inputNombre" type="text"/></td>
+        </tr>
+        <tr>
+            <td><label for="inputPrimerApellido">Apellido 1:</label></td>
+            <td><input id="inputPrimerApellido" type="text"/></td>
+        </tr>
+        <tr>
+            <td><label for="inputSegundoApellido">Apellido 2:</label></td>
+            <td><input id="inputSegundoApellido" type="text"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class="botonExpandido" onclick="concatenar()">Pulsa para concatenar</button></td>
+        </tr>
+        <tr>
+            <td><label for="inputResultado">Resultado:</label></td>
+            <td><input id="inputResultado" type="text"/></td>
+        </tr>
+    </table>
+</body>
+</html>

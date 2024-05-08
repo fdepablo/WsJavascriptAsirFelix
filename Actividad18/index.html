@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 18</title>
+    <script>
+        console.log("Bienvenidos a nuestro página")
+        //En la linea 10 NO existe el body
+        //document.body.style.background = "yellow"
+        function ponerBodyAmarillo(){
+            document.body.style.background = "yellow"
+        }
+        function ponerBodyRojo(){
+            document.body.style.background = "#FF0000";
+        }
+        function ponerBodyAzul(){
+            document.body.style.background = "#0000FF";
+        }
+        function ponerBodyRosa(){
+            document.body.style.background = "pink";
+        }
+        function ponerBodyMorado(){
+            document.body.style.background = "#FF00FF";
+        }
+        function mostrarACambiado(){
+            console.log("Ha cambiado el select")
+            //Hasta aquí el ejercio, vamos a ampliar la funcionalidad
+            let colorEscogido = selectColores.value;
+            console.log("El color elegido es el: " + colorEscogido)
+            if(colorEscogido == "Rojo"){
+                ponerBodyRojo();
+            }else if(colorEscogido == "Rosa"){
+                ponerBodyRosa();
+            }else if(colorEscogido == "Amarillo"){
+                ponerBodyAmarillo();
+            }else if(colorEscogido == "Morado"){
+                ponerBodyMorado();
+            }else{//Sería mejor poner otro "else if"
+                ponerBodyAzul();
+            }
+        }
+    </script>
+</head>
+<!-- En evento onLoad() se ejecuta cuando la página se haya cargado-->
+<body onload="ponerBodyAmarillo()">
+    <h1 style="text-align: center;">Bienvenido a nuestra página</h1>
+    <!-- El evento onfocus se lanza cuando el curso del raton haga click
+    en el componente, en este caso el input
+        También existe el evento onblur, que se lanza cuando el cursor
+        del raton pierda el foco
+    -->
+    <input type="text" onfocus="ponerBodyRosa()" onblur="ponerBodyMorado()"/>
+    <br/>
+    <button onmouseover="ponerBodyAzul()" onmouseout="ponerBodyRojo()">Pásame por encima</button>
+    <select id="selectColores" onchange="mostrarACambiado()">
+        <option>Rojo</option>
+        <option>Rosa</option>
+        <option>Amarillo</option>
+        <option>Morado</option>
+        <option>Azul</option>
+    </select>
+</body>
+</html>
