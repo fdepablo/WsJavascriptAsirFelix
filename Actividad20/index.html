@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 20</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+        button{
+            width: 59px;
+            font-weight: 900;
+            font-size: 25px;
+        }
+    </style>
+    <script>
+        function recogerValorNumerico1(){
+            let numero = parseInt(inputNumero1.value)
+            return numero;
+        }
+
+        function recogerValorNumerico2(){
+            //Transformamos el valor del campo inputNumero2 a numero
+            let numero = parseInt(inputNumero2.value)
+            //Devolvemos a quien haya invocado esta función el valor
+            //numérico
+            return numero;
+        }
+
+        function sumar(){
+            let numero1 = recogerValorNumerico1();
+            let numero2 = recogerValorNumerico2();
+            let resultado = numero1 + numero2;
+            inputResultado.value = resultado;
+        }
+
+        function restar(){
+            let numero1 = recogerValorNumerico1();
+            let numero2 = recogerValorNumerico2();
+            let resultado = numero1 - numero2;
+            inputResultado.value = resultado;
+        }
+
+        function multiplicar(){
+            let numero1 = recogerValorNumerico1();
+            let numero2 = recogerValorNumerico2();
+            let resultado = numero1 * numero2;
+            inputResultado.value = resultado;
+        }
+
+        function dividir(){
+            let numero1 = recogerValorNumerico1();
+            let numero2 = recogerValorNumerico2();
+            let resultado = numero1 / numero2;
+            inputResultado.value = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Actividad 20</h1>
+    <table>
+        <tr>
+            <td><label for="inputNumero1">Número 1:</label></td>
+            <td><input id="inputNumero1" type="number"/></td>
+        </tr>
+        <tr>
+            <td><label for="inputNumero2">Número 2:</label></td>
+            <td><input id="inputNumero2" type="number"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="sumar()">+</button>
+                <button onclick="restar()">-</button>
+                <button onclick="multiplicar()">*</button>
+                <button onclick="dividir()">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultado">Resultado:</label></td>
+            <td><input id="inputResultado" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+</body>
+</html>
