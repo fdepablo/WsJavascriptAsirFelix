@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 21</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function calcularMayorMenor(){
+            let numero1 = parseInt(inputNumero1.value)
+            let numero2 = parseInt(inputNumero2.value)
+            /* Esto sería para comprobar si los campos está vacios
+            console.log("numero1: " + numero1)
+            if(isNaN(numero1) || isNaN(numero2)){
+                inputResultado.value = "Algun número esta vacio"
+                return;//dejamos de ejecutar la función
+            }*/
+
+            if(numero1 < numero2){
+                inputResultado.value = "Número 1 es menor"
+            }else if(numero1 > numero2){
+                inputResultado.value = "Número 1 es mayor"
+            }else{
+                inputResultado.value = "Los números son iguales"
+            }
+        }
+
+        function calcularDiaSemana(){
+            let diaSemana = inputDiaSemana.value
+            if(diaSemana == 1){
+                inputResultadoDiaSemana.value = "Lunes"
+            }else if(diaSemana == 2){
+                inputResultadoDiaSemana.value = "Martes"
+            }else if(diaSemana == 3){
+                inputResultadoDiaSemana.value = "Miercoles"
+            }else if(diaSemana == 4){
+                inputResultadoDiaSemana.value = "Jueves"
+            }else if(diaSemana == 5){
+                inputResultadoDiaSemana.value = "Viernes"
+            }else if(diaSemana == 6){
+                inputResultadoDiaSemana.value = "Sábado"
+            }else if(diaSemana == 7){
+                inputResultadoDiaSemana.value = "Domingo"
+            }else{
+                inputResultadoDiaSemana.value = "Entrada invalida(1-7)"
+            }
+        }
+
+        function calcularAprobadoSuspenso(){
+            let nota = parseInt(inputNota.value)
+            if(nota >= 0 && nota < 50){
+                inputResultadoNota.value = "SUSPENSO"
+            }else if(nota >= 50 && nota <= 100){
+                inputResultadoNota.value = "APROBADO"
+            }else{
+                inputResultadoNota.value = "Entrada invalida(0-100)"
+            }
+        }
+
+        function calcularCategoriaEdad(){
+            let edad = parseInt(inputEdad.value)
+            if(edad >= 0 && edad < 13){
+                inputResultadoCategoria.value = "NIÑO"
+            }else if(edad >= 13 && edad <= 19){
+                inputResultadoCategoria.value = "ADOLESCENTE"
+            }else if(edad >= 20 && edad <= 64){
+                inputResultadoCategoria.value = "ADULTO"
+            }else if(edad >= 65 && edad <= 130){
+                inputResultadoCategoria.value = "ADULTO MAYOR"
+            }else{
+                inputResultadoCategoria.value = "Entrada invalida(0-130)"
+            }
+        }
+
+        function operar(){
+            
+            let numero1 = parseInt(inputNumero1Calculadora.value)
+            let numero2 = parseInt(inputNumero2Calculadora.value)
+            let opcion = selectOperacion.value
+            console.log("operando... " + opcion)
+
+            if(opcion == "Sumar"){
+                inputResultadoCalculadora.value = numero1 + numero2
+            }else if(opcion == "Restar"){
+                inputResultadoCalculadora.value = numero1 - numero2
+            }else if(opcion == "Multiplicar"){
+                inputResultadoCalculadora.value = numero1 * numero2
+            }else{//anidamiento de IF o condicionales
+                if(numero2 == 0){
+                    inputResultadoCalculadora.value = "INFINITO"
+                }else{
+                    inputResultadoCalculadora.value = numero1 / numero2
+                }                
+            }
+        }
+
+        function calcularParImpar(){
+            //para hacer esta operación nos apoyaremos en el modulo
+            let numero = parseInt(inputNumero.value)
+            if(numero % 2 == 0){
+                inputResultadoParImpar.value = "PAR"
+            }else{
+                inputResultadoParImpar.value = "IMPAR"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Actividad 21</h1>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputNumero1">Número 1:</label></td>
+            <td><input id="inputNumero1" type="number"/></td>
+        </tr>
+        <tr>
+            <td><label for="inputNumero2">Número 2:</label></td>
+            <td><input id="inputNumero2" type="number"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calcularMayorMenor()">Calcular mayor o menor</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultado">Resultado:</label></td>
+            <td><input id="inputResultado" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputDiaSemana">Dia de la semana:</label></td>
+            <td><input id="inputDiaSemana" type="number"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calcularDiaSemana()">Calcular día de la semana</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultadoDiaSemana">Resultado:</label></td>
+            <td><input id="inputResultadoDiaSemana" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputNota">Nota:</label></td>
+            <td><input id="inputNota" type="number"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calcularAprobadoSuspenso()">Calcular aprobado o suspenso</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultadoNota">Resultado:</label></td>
+            <td><input id="inputResultadoNota" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputEdad">Edad:</label></td>
+            <td><input id="inputEdad" type="number"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calcularCategoriaEdad()">Categoría</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultadoCategoria">Resultado:</label></td>
+            <td><input id="inputResultadoCategoria" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputNumero1Calculadora">Número 1:</label></td>
+            <td><input id="inputNumero1Calculadora" type="number" value="0"/></td>
+        </tr>
+        <tr>
+            <td><label for="inputNumero2Calculadora">Número 2:</label></td>
+            <td><input id="inputNumero2Calculadora" type="number" value="0"/></td>
+        </tr>
+        <tr>
+            <td><label for="selectOperacion">Operacion:</label></td>
+            <td>
+                <select id="selectOperacion">
+                    <option>Sumar</option>
+                    <option>Restar</option>
+                    <option>Multiplicar</option>
+                    <option>Dividir</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="operar()">Operar</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultadoCalculadora">Resultado:</label></td>
+            <td><input id="inputResultadoCalculadora" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr>
+            <td><label for="inputNumero">Numero:</label></td>
+            <td><input id="inputNumero" type="number" value="0"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="calcularParImpar()">Calcular Par/Impar</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="inputResultadoParImpar">Resultado:</label></td>
+            <td><input id="inputResultadoParImpar" type="text" readonly="true"/></td>
+        </tr>
+    </table>
+    <hr/>
+</body>
+</html>
