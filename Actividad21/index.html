@@ -13,7 +13,9 @@
     </style>
     <script>
         function calcularMayorMenor(){
-            let numero1 = parseInt(inputNumero1.value)
+            //podemos distinguir el tipo de la variable con el nombre de la variable
+            let sNumero1 = inputNumero1.value
+            let iNumero1 = parseInt(sNumero1)
             let numero2 = parseInt(inputNumero2.value)
             /* Esto sería para comprobar si los campos está vacios
             console.log("numero1: " + numero1)
@@ -22,9 +24,9 @@
                 return;//dejamos de ejecutar la función
             }*/
 
-            if(numero1 < numero2){
+            if(iNumero1 < numero2){
                 inputResultado.value = "Número 1 es menor"
-            }else if(numero1 > numero2){
+            }else if(iNumero1 > numero2){
                 inputResultado.value = "Número 1 es mayor"
             }else{
                 inputResultado.value = "Los números son iguales"
